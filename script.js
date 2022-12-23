@@ -59,5 +59,9 @@ function closeModal() {
 )}
 
 //Adicionando a função closeModal no botão de cancelar e mo botão de adicionar ao carrinho
-document.querySelector(".pizzaInfo--cancelButton", ".pizzaInfo--cancelMobileButton").addEventListener("click", closeModal)
-document.querySelector(".pizzaInfo--addButton").addEventListener("click", closeModal)
+
+document.querySelectorAll(".pizzaInfo--cancelButton, .pizzaInfo--cancelMobileButton").forEach((item) => {
+    item.addEventListener("click", closeModal)
+})
+
+
